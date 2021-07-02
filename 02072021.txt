@@ -1,0 +1,11 @@
+Problem 1: https://leetcode.com/problems/delete-duplicate-emails/
+
+DELETE p FROM Person p INNER JOIN Person p2 ON  p.Email = p2.Email AND  p.Id > p2.Id;
+
+Problem 2: https://leetcode.com/problems/rising-temperature/
+
+SELECT w1.id
+FROM Weather as w1
+INNER JOIN Weather as w2
+ON w1.Temperature > w2.Temperature and DATEDIFF(w1.recordDate, w2.recordDate)=1
+WHERE w1.recordDate > w2.recordDate ;
